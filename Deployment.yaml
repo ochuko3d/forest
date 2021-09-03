@@ -34,4 +34,8 @@ spec:
     targetPort: 5000
   selector:
     app: tree
+<<<<<<< HEAD
   type: 
+=======
+  type: LoadBalancer
+>>>>>>> a62124ea6439c0e9b53f4acc516735a3c683a441

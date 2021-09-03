@@ -16,4 +16,9 @@ RUN pip install -r requirements.txt --src /usr/local/src
 COPY . .
 
 EXPOSE 5000
+<<<<<<< HEAD
 CMD [ "python", "tree.py" ]
+=======
+
+CMD [ "python", "tree.py" ]
+>>>>>>> a62124ea6439c0e9b53f4acc516735a3c683a441
