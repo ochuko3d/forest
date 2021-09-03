@@ -16,5 +16,5 @@ RUN pip install -r requirements.txt --src /usr/local/src
 COPY . .
 
 EXPOSE 5000
-CMD ["pytest"]
+
 CMD [ "python", "tree.py" ]
