@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: trees
-          image: escoia/tree 
+          image: ecosia/apple
           imagePullPolicy: Never
           ports:
             - containerPort: 5000
