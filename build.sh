@@ -22,9 +22,13 @@ cd ..
 mkdir deploy
 cd deploy
 
+#pull the deployment files
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/Deployment.yaml
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/Ingress.yaml
 
+#launch the deployment and ingress
+kubectl create -f Deployment.yaml
+kubectl create -f Ingress.yaml
 #Enable Minikube Service for forest
 minikube service forest-service
 #Enable Minikube Nginx Ingress
