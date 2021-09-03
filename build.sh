@@ -11,6 +11,8 @@ eval $(minikube docker-env)
 #get the file from the repository
 mkdir forest
 cd forest
+mkdir trees
+cd trees
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/requirements.txt
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/tree.py
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/Dockerfile
@@ -18,13 +20,12 @@ wget https://raw.githubusercontent.com/ochuko3d/forest/master/Dockerfile
 #run the build 
 docker build . -t ecosia/apple
 
-cd ..
-mkdir deploy
-cd deploy
+
+
 
 #pull the deployment files
-wget https://raw.githubusercontent.com/ochuko3d/forest/master/Deployment.yaml
-wget https://raw.githubusercontent.com/ochuko3d/forest/master/Ingress.yaml
+sudo wget https://raw.githubusercontent.com/ochuko3d/forest/master/Deployment.yaml
+sudo wget https://raw.githubusercontent.com/ochuko3d/forest/master/Ingress.yaml
 
 #launch the deployment and ingress
 kubectl create -f Deployment.yaml
