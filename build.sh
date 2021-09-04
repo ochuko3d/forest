@@ -16,6 +16,7 @@ cd trees
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/requirements.txt
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/tree.py
 wget https://raw.githubusercontent.com/ochuko3d/forest/master/Dockerfile
+wget https://raw.githubusercontent.com/ochuko3d/forest/master/test_tree.py
 
 #run the build 
 docker build . -t ecosia/apple
