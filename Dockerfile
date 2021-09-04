@@ -4,8 +4,8 @@ RUN apt-get clean \
     && apt-get -y update
 
 RUN apt-get -y install \
-    nginx \
     python3-dev \
+    nginx \
     build-essential
 
 WORKDIR /app
@@ -15,10 +15,9 @@ RUN pip install -r requirements.txt --src /usr/local/src
 
 COPY . .
 
+RUN pip install pytest pytest-cov && rm -rf /root/.cache
+RUN pytest
+
 EXPOSE 5000
-<<<<<<< HEAD
-CMD [ "python", "tree.py" ]
-=======
 
 CMD [ "python", "tree.py" ]
->>>>>>> a62124ea6439c0e9b53f4acc516735a3c683a441

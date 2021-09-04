@@ -20,9 +20,6 @@ wget https://raw.githubusercontent.com/ochuko3d/forest/master/Dockerfile
 #run the build 
 docker build . -t ecosia/apple
 
-
-
-
 #pull the deployment files
 sudo wget https://raw.githubusercontent.com/ochuko3d/forest/master/Deployment.yaml
 sudo wget https://raw.githubusercontent.com/ochuko3d/forest/master/Ingress.yaml
@@ -34,3 +31,6 @@ kubectl create -f Ingress.yaml
 minikube service forest-service
 #Enable Minikube Nginx Ingress
 minikube addons enable ingress
+
+# Add to host file
+echo "$(minikube ip) local.ecosia.org" | sudo tee -a /etc/hosts
